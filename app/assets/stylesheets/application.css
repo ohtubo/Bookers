@@ -13,6 +13,7 @@
  *= require_tree .
  *= require_self
  */
+<<<<<<< HEAD
 
 body {
     background-color: #fff;
@@ -78,3 +79,5 @@ label{
 /*    font-weight: bold;*/
 /*    text-align: -internal-center;*/
 /*}*/
+=======
+>>>>>>> origin/main
