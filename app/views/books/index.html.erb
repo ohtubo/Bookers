@@ -8,7 +8,7 @@
   <thead>
     <tr>
       <th>Title</th>
-      <th>Boby</th>
+      <th>Body</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -27,15 +27,19 @@
 </table>
 
 <h2>New book</h2>
-<!-- form_with部分 -->
+
 <%= form_with model: @book, url:'/books', local:true do |f| %>
-  <h4>Title</h4>
-  <%= f.text_field :title %>
-  <h4>Body</h4>
-  <%= f.text_area :body %>
-  <%= f.submit 'Create Book' %>
+  <div class="field">
+    <label for="book_title">Title</label>
+    <%= f.text_field :title %>
+  </div>
+
+  <div class="field">
+    <label for="book_body">Body</label>
+    <%= f.text_area :body %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit 'Create Book' %>
+  </div>
 <% end %>
-
-<!---->
-
-<!---->
