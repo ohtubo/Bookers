@@ -13,7 +13,6 @@
  *= require_tree .
  *= require_self
  */
-<<<<<<< HEAD
 
 body {
     background-color: #fff;
@@ -66,18 +65,3 @@ div.field, div.actions {
 label{
     display: block;
 }
-/*thead {*/
-/*    display: table-header-group;*/
-/*    vertical-align: middle;*/
-/*    border-color: inherit;*/
-/*}*/
-
-/*th {*/
-/*    padding-bottom: 5px;*/
-/*    display: table-cell;*/
-/*    vertical-align: inherit;*/
-/*    font-weight: bold;*/
-/*    text-align: -internal-center;*/
-/*}*/
-=======
->>>>>>> origin/main

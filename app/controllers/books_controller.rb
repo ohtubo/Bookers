@@ -1,5 +1,4 @@
 class BooksController < ApplicationController
-<<<<<<< HEAD
 
   def index
     @book = Book.new
@@ -26,7 +25,7 @@ class BooksController < ApplicationController
   def update
     book = Book.find(params[:id])
     book.update(book_params)
-    redirect_to books_path(book.id)
+    redirect_to booklist_path(book.id)
   end
 
   def destroy
@@ -40,18 +39,4 @@ class BooksController < ApplicationController
   def book_params
     params.require(:book).permit(:title, :body)
   end
-
-=======
-  def index
-  end
-
-  def show
-  end
-
-  def new
-  end
-
-  def edit
-  end
->>>>>>> origin/main
 end
