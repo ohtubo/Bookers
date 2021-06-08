@@ -11,11 +11,14 @@ class BooksController < ApplicationController
 
   def create
     # １. データを新規登録するためのインスタンス作成
-    book = Book.new(book_params)
+    @book = Book.new(book_params)
     # ２. データをデータベースに保存するためのsaveメソッド実行
-    book.save
-    # ３. Show画面へリダイレクト
-    redirect_to booklist_path(book.id)
+    if @book.save
+      flash[:notice] = "Book was successfully created."
+      redirect_to booklist_path(book.id)
+    else
+      redirect_to books_path(@book.id)
+    end
   end
 
   def edit
