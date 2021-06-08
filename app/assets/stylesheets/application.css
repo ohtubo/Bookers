@@ -63,6 +63,7 @@ div.field, div.actions {
 }
 
 label{
+
     display: block;
 }
 
@@ -100,3 +101,4 @@ label{
     font-size:12px;
     list-style:square
 }
+
