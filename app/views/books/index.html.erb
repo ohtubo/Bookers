@@ -1,3 +1,7 @@
+<% if flash[:notice] %>
+  <p id="notice"><%= flash[:notice] %></p>
+<% end %>
+
 <h1>Books</h1>
 
 <table>
@@ -25,6 +29,9 @@
 <h2>New book</h2>
 
 <%= form_with model: @book, url:'/books', local:true do |f| %>
+
+<%= render 'layouts/error_form', locals: { book: @book } %>
+
   <div class="field">
     <label for="book_title">Title</label>
     <%= f.text_field :title %>
