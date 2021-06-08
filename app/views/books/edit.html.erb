@@ -4,7 +4,7 @@
 <%= form_with model:@book, local: true do |f| %>
 
   <%= render 'layouts/error_form', book: @book %>
-  
+
   <div class="field">
     <label for="book_title"><%= f.label :title %></label>
     <%= f.text_field :title %>
@@ -23,7 +23,7 @@
   </div>
 <% end %>
 
-<a><%= link_to 'Show', booklist_path(@book.id) %></a>
+<%= link_to 'Show', book_path(@book) %>
 |
-<a><%= link_to "Back", books_path %></a>
+<%= link_to "Back", books_path %>
 

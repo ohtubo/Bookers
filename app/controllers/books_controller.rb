@@ -2,12 +2,13 @@ class BooksController < ApplicationController
 
   def index
     @book = Book.new
-    @books =Book.all.order(id: "DESC")
+    @books =Book.all.order(:id)
   end
 
   def show
 
     @book = Book.find(params[:id])
+    
 
   end
 
@@ -17,9 +18,9 @@ class BooksController < ApplicationController
     # ２. データをデータベースに保存するためのsaveメソッド実行
     if @book.save
       flash[:notice] = "Book was successfully created."
-      redirect_to booklist_path(@book.id)
+      redirect_to book_path(@book)
     else
-      @books = Book.all.order(id: "DESC")
+      @books = Book.all.order(:id)
       render :index
     end
   end
@@ -34,18 +35,17 @@ class BooksController < ApplicationController
     @book = Book.find(params[:id])
     if @book.update(book_params)
       flash[:notice] = "Book was successfully updated."
-      redirect_to booklist_path(@book.id)
+      redirect_to book_path(@book)
     else
       render :edit
     end
-
   end
 
   def destroy
     book = Book.find(params[:id])
     if book.destroy
       flash[:notice] = "Book was successfully destroyed."
-      redirect_to books_path(book.id)
+      redirect_to books_path
     else
       render :index
     end
