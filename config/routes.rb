@@ -5,18 +5,4 @@ Rails.application.routes.draw do
 
   root to: 'homes#top'
 
-  # get 'top' => 'homes#top'
-
-  # get 'books' => 'books#index'
-
-  # get 'books/:id' => 'books#show', as: 'booklist'
-
-  # post 'books' => 'books#create'
-
-  # get 'books/:id/edit' => 'books#edit', as: 'edit_booklist'
-
-  # patch 'books/:id' => 'books#update', as: 'update_booklist'
-
-  # delete 'books/:id' => 'books#destroy', as: 'destroy_bookslist'
-
 end
